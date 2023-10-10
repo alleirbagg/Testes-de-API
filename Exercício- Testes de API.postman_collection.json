@@ -47,6 +47,9 @@
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Validar mensagem de sucesso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Cadastro realizado com sucesso\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -58,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Bruna Exercicio2\",\r\n  \"email\": \"brunaexercicio2@ebac.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+					"raw": "{\r\n  \"nome\": \"Bruna Exercicio2\",\r\n  \"email\": \"brunaexercicio21@ebac.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -126,7 +129,9 @@
 							"pm.test(\"Status code é 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"pm.test(\"Validar mensagem\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Registro excluído com sucesso\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -145,7 +150,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/usuarios/1u42iqUEmSYStxn7",
+					"raw": "http://localhost:3000/usuarios/bNqeIfKUTuwJDaob",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -153,7 +158,7 @@
 					"port": "3000",
 					"path": [
 						"usuarios",
-						"1u42iqUEmSYStxn7"
+						"bNqeIfKUTuwJDaob"
 					]
 				}
 			},
@@ -168,7 +173,8 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
-							"});"
+							"});\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -179,7 +185,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nome\": \"Fulano Exercicioa\",\r\n  \"email\": \"fulano@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+					"raw": "{\r\n  \"nome\": \"Fulano Exercicios\",\r\n  \"email\": \"fulano@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
